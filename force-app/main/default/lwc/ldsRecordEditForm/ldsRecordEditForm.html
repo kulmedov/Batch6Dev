@@ -1,0 +1,25 @@
+<template>
+    <lightning-card 
+        title="LDS Edit Form"
+    >
+        <lightning-record-edit-form 
+            record-id={recordId}
+            object-api-name={objectApiName}
+            onsuccess={handleSuccess}
+            onerror={handleError}
+        >
+            <div class="slds-grid">
+                <div class="slds-col">
+                    <lightning-input-field field-name={accountNameField}></lightning-input-field>
+                    <lightning-input-field field-name={accountPhoneField}></lightning-input-field>
+                    <lightning-input-field field-name={accountBillingAddressField}></lightning-input-field>
+                    <lightning-input-field field-name={accountWebsiteField}></lightning-input-field>
+                    <lightning-input-field field-name={accountTypeField}></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-var-m-top_medium">
+                <lightning-button type="submit" variant="brand" label="Save"></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

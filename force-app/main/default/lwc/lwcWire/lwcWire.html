@@ -1,0 +1,28 @@
+<template>
+    <p>--------GOOD METHOD START---------</p>
+    <template if:true={leadsList.data}>
+        <template for:each={leadsList.data} for:item="lead" for:index="index">
+            <p key={lead.Id}>Index: {index}</p>
+            <p key={lead.Id}>Name: {lead.Name}</p>
+            <p key={lead.Id}>Company: {lead.Company}</p>
+            <p key={lead.Id}>Title: {lead.Title}</p>
+            <p key={lead.Id}>Email: {lead.Email}</p>
+            <p key={lead.Id}>----------------------</p>
+        </template>
+    </template>
+    <template if:true={leadsList.error}>
+        Error occured in fetching leads: {leadsList.error.body.message}
+    </template>
+    <p>########GOOD METHOD END##########</p>
+    <p>--------ERROR METHOD START---------</p>
+    <template if:true={leadsErrorMethod.data}>
+        <template for:each={leadsErrorMethod.data} for:item="lead" for:index="index">
+            <p key={lead.Id}>Index: {index}</p>
+            <p key={lead.Id}>Name: {lead.Name}</p>
+        </template>
+    </template>
+    <template if:true={leadsErrorMethod.error}>
+        Error occured in fetching leads: {leadsErrorMethod.error.body.message}
+    </template>
+    <p>########ERROR METHOD END##########</p>
+</template>

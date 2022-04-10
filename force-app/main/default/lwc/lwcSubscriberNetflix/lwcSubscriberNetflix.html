@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Netflix Subscriber">
+        <lightning-button 
+            label="Subscribe"
+            variant="brand"
+            onclick={handleSubscribe}
+        ></lightning-button>
+        <br/>
+        <lightning-button 
+            label="Unsubscribe"
+            variant="brand"
+            onclick={handleUnsubscribe}
+        ></lightning-button>
+        <br/>
+        {netflixData}
+    </lightning-card>
+</template>

@@ -1,0 +1,27 @@
+// Fetch Account Name, Account Number and Record Id for all the accounts present in your org.
+// Fetch all the accounts which have no Phone number populated.
+// Chapter 4 also here
+SELECT Name, AccountNumber, Id FROM account
+
+Select AccountId, FirstName, LastName, Email from contact
+
+select id, name from account ORDER BY name    
+
+select id, name from account where phone = null
+
+select id, name from contact where accountID = null
+
+select id, name from contact where accountID = null
+
+select count () from opportunity
+
+select name, amount, id from opportunity where stageName = 'closed won' and amount >=35000 
+
+select id, name from contact ORDER BY LastName desc
+
+select id, name from opportunity where amount<5000
+
+select id, amount, name from opportunity ORDER BY amount desc limit 10
+
+select id, name from opportunity ORDER BY amount asc limit 20 and where stageName != 'Closed Won' and where stageName != 'Closed Lost' 
+

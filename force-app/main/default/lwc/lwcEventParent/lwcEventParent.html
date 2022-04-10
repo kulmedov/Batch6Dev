@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Event parent">
+        This is parent component
+        <c-lwc-event-child onspidermannowayhome={handleMovie}></c-lwc-event-child>
+        <template if:true={showMovieDetails}>
+            <p>Name : {movie.Name}</p>
+            <p>iMDB rating : {movie.iMDB}</p>
+            <p>Release Date : {movie.ReleaseDate}</p>
+            <p>Director : {movie.Director}</p>
+            <p>Cast : {movie.Cast}</p>
+        </template>
+    </lightning-card>
+    
+</template>

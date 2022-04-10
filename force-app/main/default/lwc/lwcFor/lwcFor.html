@@ -1,0 +1,29 @@
+<template>
+    <template for:each={accountList} for:item="acc" for:index="index">
+        <p key={acc.CustomerId}>Index: {index}</p>
+        <p key={acc.CustomerId}>Company Name: {acc.Name}</p>
+        <p key={acc.CustomerId}>Company CEO: {acc.CEO}</p>
+        <p key={acc.CustomerId}>----------------------</p>
+    </template>
+    <br/>
+    <p>###############################</p>
+    <br/>
+    <template iterator:acc={accountList}>
+        <template if:true={acc.first}>
+            <p key={acc.value.CustomerId}>This is the first entry</p>
+        </template>
+        <template if:false={acc.first}>
+            <p key={acc.value.CustomerId}>This is not the first entry</p>
+        </template>
+        <template if:true={acc.last}>
+            <p key={acc.value.CustomerId}>This is the last entry</p>
+        </template>
+        <template if:false={acc.last}>
+            <p key={acc.value.CustomerId}>This is not the last entry</p>
+        </template>
+        <p key={acc.CustomerId}>Index: {acc.index}</p>
+        <p key={acc.value.CustomerId}>Company Name: {acc.value.Name}</p>
+        <p key={acc.value.CustomerId}>Company CEO: {acc.value.CEO}</p>
+        <p key={acc.value.CustomerId}>----------------------</p>
+    </template>
+</template>

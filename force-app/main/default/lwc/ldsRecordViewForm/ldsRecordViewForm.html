@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="LDS View Form">
+        <lightning-record-view-form
+            record-id={recordId}
+            object-api-name={objectApiName}
+        >
+            <div class="slds-grid">
+                <div class="slds-col">
+                    <lightning-output-field field-name={accountNameField}></lightning-output-field>
+                    <lightning-output-field field-name={accountPhoneField}></lightning-output-field>
+                    <lightning-output-field field-name={accountWebsiteField}></lightning-output-field>
+                    <lightning-output-field field-name={accountBillingAddressField}></lightning-output-field>
+                </div>
+            </div>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>

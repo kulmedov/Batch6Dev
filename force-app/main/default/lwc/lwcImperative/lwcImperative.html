@@ -1,0 +1,24 @@
+<template>
+    <lightning-input 
+        label="Enter contact Id to fetch"
+        onchange={handleContactName}
+    ></lightning-input>
+    <lightning-button
+        label="Fetch Contact"
+        onclick={handleFetchContact}
+    ></lightning-button>
+
+    <template if:true={contactJs}>
+        <p>LastName: {contactJs.LastName}</p> 
+        <lightning-input 
+            type="email" 
+            label="Please update the email below"
+            value={contactJs.Email}
+            onchange={handleEmailChange}
+        ></lightning-input>
+        <lightning-button
+            label="Update Contact"
+            onclick={handleUpdateContact}
+        ></lightning-button>
+    </template>
+</template>

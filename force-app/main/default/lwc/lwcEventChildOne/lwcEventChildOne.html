@@ -1,0 +1,16 @@
+<template>
+    This component has bubbles = true and composed  = true
+    <div onsenddata={handleSendDataChildOneData1}>
+        <div onsenddata={handleSendDataChildOneData2}>
+            <div 
+                data-id="buttonDivChildOne" 
+                onsenddata={handleSendDataChildOneData3}
+            >
+                <lightning-button 
+                    label = "Dispatch child one event"
+                    onclick={handleSendDataClick}
+                ></lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

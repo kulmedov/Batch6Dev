@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="DATA BINDING">
+        <p>The JS value is : {str}</p>
+        <p>Account Name: {account.Name}, Location: {account.Location}</p>
+        <!-- Below code is not allowed -->
+        <!-- <p>Sum = {num1+num2}</p> -->
+        
+        <!-- Below code line is allowed -->
+        <p>Sum = {num3}</p>
+
+        <lightning-input 
+            type="text" 
+            label="Enter some text"
+            value={str}
+            onchange={handleTextChange}
+        ></lightning-input>
+
+    </lightning-card>
+</template>

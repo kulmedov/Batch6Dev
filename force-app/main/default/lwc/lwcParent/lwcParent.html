@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="This is composition example">
+        <div class="green" title="query testing">
+            This text in parent component
+        </div>
+
+        <p title="first P Tag" data-id="zero">
+            We are inside first P element in DOM
+        </p>
+        
+        <p title="second P Tag" data-id="one">
+            We are inside second P element in DOM
+        </p>
+
+        <p title="third P Tag" data-id="two">
+            We are inside third P element in DOM
+        </p>
+
+        <p title="fourth P Tag" data-id="three">
+            We are inside fourth P element in DOM
+        </p>
+
+        <c-lwc-child 
+            message="This is from parent to child"
+        ></c-lwc-child>
+
+        <lightning-button 
+            label="Click me (Parent)"
+            onclick={handleButtonClick}
+        ></lightning-button>
+    </lightning-card>
+</template>

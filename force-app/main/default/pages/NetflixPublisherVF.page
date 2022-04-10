@@ -1,0 +1,30 @@
+<apex:page> 
+    <apex:includeScript value="sforce/one/52.0/api.js"></apex:includeScript>
+    <apex:includeScript value="soap/ajax/52.0/connection.js"></apex:includeScript>
+    <apex:includeScript value="soap/ajax/52.0/apex.js"></apex:includeScript>
+
+    <apex:slds/>
+
+    <div>
+        <p>Publish your movie data from VF</p>
+        <br/>
+        <button onclick="publishMessageChannel()">Publish</button>
+    </div>
+
+    <script>
+        let NETFLIX_MOVIE_DATA = "{!$MessageChannel.NetflixMovieData__c}";
+        function publishMessageChannel(){
+            alert('VF Publish in progress');
+            let movieData = {
+                Name: "Inception",
+                iMDB: 8.8,
+                ReleaseDate: 'July 13, 2010 (USA)',
+                Director: 'Christopher Nolan',
+                Cast: 'Leonardo DiCaprio, Ken Watanabe',
+                Source: 'Visualforce'
+            };
+            sforce.one.publish(NETFLIX_MOVIE_DATA, movieData);
+        }
+    </script>
+
+</apex:page>

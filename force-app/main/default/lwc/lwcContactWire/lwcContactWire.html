@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="WIRE CONTACTS">
+        <template if:true={contacts.data}>
+            <template 
+                for:each={contacts.data} 
+                for:item="con" 
+                for:index="index"
+            >
+                <p key={con.Id}>Name: {con.Name}</p>
+                <p key={con.Id}>------------------------------</p>
+            </template>
+        </template>
+        <template if:true={contacts.error}>
+            Error in fetch: {contacts.error.body.message}
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="This is outer most component">
+        This is Grand Parent
+        <lightning-input
+            type="checkbox"
+            label="Show/Hide Parent component"
+            checked={showLwcLifecycleParent}
+            onchange={handleParentViewChange}
+        ></lightning-input>
+
+        <!-- If the showLwcLifecycleParent = true, we will load the lwcLifecycleParent component, else remove it from the DOM -->
+        <template if:true={showLwcLifecycleParent}>
+            <c-lwc-lifecycle-parent></c-lwc-lifecycle-parent>
+        </template>
+        <!-- <template if:false={showLwcLifecycleParent}>
+            <c-lwc-lifecycle-child></c-lwc-lifecycle-child>
+        </template> -->
+    </lightning-card>
+</template>

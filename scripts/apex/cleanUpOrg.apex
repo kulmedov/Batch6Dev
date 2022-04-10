@@ -1,0 +1,2 @@
+CleanUpOrg.deleteOrphanContacts();
+CleanUpOrg.deleteOrphanOpportunities();

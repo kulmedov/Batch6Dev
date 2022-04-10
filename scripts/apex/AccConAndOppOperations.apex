@@ -1,0 +1,10 @@
+AccConAndOppOperations.accountSoql();
+System.debug(AccConAndOppOperations.accountSoql2('customer - direct'));
+System.debug(AccConAndOppOperations.accountSoql3('Closed Won'));
+System.debug(AccConAndOppOperations.printSoql4('Web', 'Closed Lost'));
+System.debug(AccConAndOppOperations.printSoql5());
+System.debug(AccConAndOppOperations.sumOfAmount());
+AccConAndOppOperations.sumOfAmount();
+system.debug(AccConAndOppOperations.printAccount('Ili State University', 10000000, 'Deneme'));
+system.debug(AccConAndOppOperations.sevengroup('', 10000000, 'Deneme'));
+system.debug(AccConAndOppOperations.CreateNewAccount('', 78995432, 'Education'));

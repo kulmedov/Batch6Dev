@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isExposed>true</isExposed>
+    <masterLabel>LMS Netflix data</masterLabel>
+    <description>This will be used as a object format to send the data</description>
+    <lightningMessageFields>
+        <fieldName>Name</fieldName>
+        <description>This contains movie title</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>iMDB</fieldName>
+        <description>This contains movie iMDB rating</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>ReleaseDate</fieldName>
+        <description>This contains movie release date</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>Director</fieldName>
+        <description>This contains movie director name</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>Cast</fieldName>
+        <description>This contains movie cast</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

@@ -1,0 +1,91 @@
+<template>
+    <lightning-card title="Imperative Apex call">
+        <div class="slds-p-around_x-small">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <span>
+                        <lightning-button 
+                            variant="success" 
+                            label="Show Accounts" 
+                            title="show accounts" 
+                            onclick={handleShowAccount} 
+                            class="slds-var-m-left_x-small"
+                        ></lightning-button>
+                    </span>
+                </div>
+                <div class="slds-col">
+                    <span></span>
+                </div>
+                <div class="slds-col">
+                    <span></span>
+                </div>
+                <div class="slds-col">
+                    <span>
+                        <lightning-button 
+                            variant="destructive" 
+                            label="Hide Accounts" 
+                            title="hide accounts" 
+                            onclick={handleHideAccount} 
+                            class="slds-var-m-left_x-small"
+                        ></lightning-button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <template if:true={showAccounts}>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                <thead>
+                  <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                      <div class="slds-truncate" title="Id">Account Id</div>
+                    </th>
+                    <th class="" scope="col">
+                      <div class="slds-truncate" title="Name">Name</div>
+                    </th>
+                    <th class="" scope="col">
+                      <div class="slds-truncate" title="Site">Site</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <template 
+                        for:each={accountList} 
+                        for:item="acc"
+                        for:index="index"
+                    >
+                        <tr key={acc.Id} class="slds-hint-parent">
+                            <td data-label="accountId">
+                                <div class="slds-truncate" title={acc.Id}>{acc.Id}</div>
+                            </td>
+                            <td data-label="AccountName">
+                                <div class="slds-truncate" title={acc.Name}>{acc.Name}</div>
+                            </td>
+                            <td data-label="AccountSite">
+                                <div class="slds-truncate" title={acc.Site}>{acc.Site}</div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+              </table>
+        </template>
+        <div class="slds-var-p-around_x-small">
+            <lightning-input 
+                label="Enter Id" 
+                onchange={handleAccountId}
+            ></lightning-input>
+            <lightning-button 
+                label="Fetch Account" 
+                onclick={handleFetchAccount}
+            ></lightning-button>
+        </div>
+        <div class="slds-var-p-around_x-small">
+            <lightning-input 
+                label="Enter New Site for the selected Account" data-name="accountsite"
+            ></lightning-input>
+            <lightning-button 
+                label="Update Account" 
+                onclick={handleUpdateAccount}
+            ></lightning-button>
+        </div>
+    </lightning-card>
+</template>

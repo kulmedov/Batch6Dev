@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Bubbles Parent">
+        <!--  Child 1 starts-->
+        <div onsenddata={handleSendDataParentChildOne1}>
+            <div onsenddata={handleSendDataParentChildOne2}>
+                <!-- child component here which will fire an event : bubbles = true && composed = true-->
+                <c-lwc-event-child-one></c-lwc-event-child-one>
+            </div>
+        </div>
+        <!--  Child 1 ends-->
+        <!--  Child 2 starts-->
+        <div onsenddata={handleSendDataParentChildTwo1}>
+            <div onsenddata={handleSendDataParentChildTwo2}>
+                <!-- child component here which will fire an event : bubbles = true && composed = false-->
+                <c-lwc-event-child-two></c-lwc-event-child-two>
+            </div>
+        </div>
+        <!--  Child 2 ends-->
+        <!--  Child 3 starts-->
+        <div onsenddata={handleSendDataParentChildThree1}>
+            <div onsenddata={handleSendDataParentChildThree2}>
+                <!-- child component here which will fire an event : bubbles = false -->
+                <c-lwc-event-child-three></c-lwc-event-child-three>
+            </div>
+        </div>
+        <!--  Child 3 ends-->
+    </lightning-card>
+</template>

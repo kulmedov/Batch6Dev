@@ -1,0 +1,4 @@
+SELECT ID, Name, account.name, account.industry FROM contact WHERE Account.industry = 'Energy'
+
+SELECT ID, Name, subject__c, priority__c, salesforce_project__r.Project_Name__c,
+salesforce_project__r.status__c FROM salesforce_ticket__c 

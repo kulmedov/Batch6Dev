@@ -1,0 +1,16 @@
+<template>
+    <lightning-input 
+        type="checkbox" 
+        label="Basic option" 
+        name="toggle"
+        checked={showSection}
+        onchange={handleCheckBoxChange}
+    ></lightning-input>
+
+    <template if:true={showSection}>
+        This is displayed when showSection is TRUE
+    </template>
+    <template if:false={showSection}>
+        This is displayed when showSection is FALSE
+    </template>
+</template>

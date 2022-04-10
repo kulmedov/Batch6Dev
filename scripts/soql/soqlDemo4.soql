@@ -1,0 +1,9 @@
+SELECT leadSource, COUNT(name) FROM lead GROUP BY LeadSource
+
+select name, count(id) from account group by name HAVING count(id)>1
+
+select sum(amount), stageName from opportunity where isclosed = false
+group by stageName HAVING sum (amount)>20000
+
+find {salesforce} in name fields
+returning lead(name, phone), account(name, phone) 

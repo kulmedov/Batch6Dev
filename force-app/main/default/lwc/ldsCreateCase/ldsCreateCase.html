@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title = "NEW CASE">
+        <div style="color: rgb(16, 29, 29);">
+            <div class="slds-p-top_medium">
+                <lightning-record-edit-form
+                    object-api-name="Case"
+                    onsuccess={handleSuccess}>
+                    <lightning-input-field field-name="Subject"> </lightning-input-field>
+                    <lightning-input-field field-name="AccountId"> </lightning-input-field>
+                    <lightning-input-field field-name="Description"> </lightning-input-field>
+                    <lightning-button
+                        class="slds-m-top_small"
+                        variant="brand"
+                        type="submit"
+                        label="Create Case"
+                    >
+                    </lightning-button>
+                </lightning-record-edit-form>
+            </div>
+            <div class="slds-p-top_medium">
+                <lightning-record-view-form
+                    object-api-name="Case"
+                    record-id={strCaseId}>
+                        <lightning-output-field field-name="Subject"></lightning-output-field>
+                        <lightning-output-field field-name="AccountId"></lightning-output-field>
+                        <lightning-output-field field-name="Description"></lightning-output-field>
+                </lightning-record-view-form>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,7 @@
+SELECT Id, Name, (select lastName from contacts) from account 
+
+SELECT ID, name, project_name__c, (select name, subject__c, priority__c from salesforce_tickets__r)
+from salesforce_project__c
+
+select Name, annualrevenue, (select name, amount 
+from opportunities where stagename='closed won') from account
